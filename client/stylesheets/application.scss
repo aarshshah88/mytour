@@ -8,3 +8,19 @@
 @import "module/Signup";
 
 @import "state/Navbar";
+
+body { 
+	color: #347eff !important; 
+	background-color: #fff !important; 
+	font-family: 'Varela Round', sans-serif !important;
+}
+
+.section {
+	height: 100%;
+	padding-top: 160px;
+}
+
+.header {
+	font-family: 'Poiret One', cursive !important;
+	font-size: 600%;
+}

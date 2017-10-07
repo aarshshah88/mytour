@@ -35,3 +35,4 @@ ddp-rate-limiter@1.0.7
 shell-server@0.2.3
 aldeed:collection2-core@2.0.0
 react-meteor-data
+pagebakers:ionicons
