@@ -6,10 +6,7 @@ Meteor.publish('tours.list', (search) => {
   	check(search, Object);
 
 	const finalSearch = { 
-		city: search.city,
-		themes: { 
-			$in: search.themes
-		}
+		city: search.city
 	};
 
 	return Tours.find(finalSearch);
