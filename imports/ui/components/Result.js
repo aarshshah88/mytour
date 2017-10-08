@@ -20,7 +20,7 @@ class Result extends React.Component {
     return (
 		<div className="row tour">
             <div className= "col-sm-2">
-              <img className="circle" />
+              <img className="circle" src={ "/guides/" + tour.guide_name } />
             </div>
             <div className="col-sm-10 info">
             <h4> { tour.guide_name } </h4>
