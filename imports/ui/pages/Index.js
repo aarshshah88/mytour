@@ -137,9 +137,11 @@ class Index extends React.Component {
     return (
 	  	<div className="Index">
 	  		<div className="section 1">
+	  			{/*
 				<div style={{ position: "relative" }}>
 				    <div id="map" style={{ height: "400px" }}></div>
-				  </div>
+				</div>
+				*/}
 			    <Grid>
 					<h2 className="text-center header">
 						MyTrip
@@ -177,8 +179,10 @@ class Index extends React.Component {
 						Result
 					</h2> 
 					{
-					  	results.length > 0 ? 
-					  		<Result tour={ result }/>
+					  	results.length > 0 ?
+							results.map((result) => (
+						      <Result key={ result._id } tour={ result }/>
+						    ))
 					  	:
 					  		<div className="text-center">
 					  			No tours available. 

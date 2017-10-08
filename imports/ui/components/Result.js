@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Grid, Row, Col } from 'react-bootstrap';
 import { Meteor } from 'meteor/meteor';
 
-class Result extends React.Component {
+export default class Result extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -18,7 +18,7 @@ class Result extends React.Component {
   	const { tour } = this.props;
 
     return (
-		<div className="row tour">
+		  <div className="row tour">
             <div className= "col-sm-2">
               <img className="circle" src={ "/guides/" + tour.guide_name } />
             </div>
