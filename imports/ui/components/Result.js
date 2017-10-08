@@ -61,7 +61,7 @@ export default class Result extends React.Component {
     return (
 		  <div className="row tour">
           <div className= "col-sm-2">
-            <img className="circle" src={ "/guides/" + tour.guide_name } />
+            <img className="circle" src={ "/guides/" + tour.guide_name + ".jpg" } />
           </div>
             <div className="col-sm-10 info">
             <h4> { tour.guide_name } </h4>
