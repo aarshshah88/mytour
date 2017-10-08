@@ -25,68 +25,6 @@ class Index extends React.Component {
   componentDidMount() {
   	$(".2").hide();
   	$(".3").hide();
-
-  	let locations = [
-        {
-            "Latitude": 40.773565,
-            "Longitude": -73.956555
-        },
-        {
-            "Latitude": 40.763758,
-            "Longitude": -73.991818
-        },
-        {
-            "Latitude": 40.723301,
-            "Longitude": -74.002988
-        },
-        {
-            "Latitude": 40.723008,
-            "Longitude": -74.000633
-        },
-        {
-            "Latitude": 40.735863,
-            "Longitude": -73.991084
-        }
-    ];
-
-    let location_names = [
-        "Upper East Side",
-        "Midtown West",
-        "Soho",
-        "Lower Manhattan",
-        "Union Square"
-    ];
-
-	var map = L.Wrld.map("map", "03b416aac99d127d4e23a65ce028b60a", {
-		center: [locations[0].Latitude, locations[0].Longitude],
-		zoom: 16
-	});
-
-    let counter = 0;
-	setInterval(function() {
-		if (counter == locations.length * 2) {
-			return;
-		}
-
-		let current = Math.floor(counter / 2);
-
-		if (counter % 2 == 0) {
-			map.openPopup(location_names[current], [locations[current].Latitude, locations[current].Longitude]);
-
-			map.setView([locations[current].Latitude, locations[current].Longitude], 19, {
-		  		animate: true,
-		  		durationSeconds: 3
-			});
-		} else {
-			map.setView([locations[current].Latitude, locations[current].Longitude], 12.58, {
-		  		animate: true,
-		  		durationSeconds: 3
-			});
-		}
-
-		counter = counter + 1;
-	}, 4000);
-
   }
 
   next() {
@@ -137,11 +75,6 @@ class Index extends React.Component {
     return (
 	  	<div className="Index">
 	  		<div className="section 1">
-	  			{/*
-				<div style={{ position: "relative" }}>
-				    <div id="map" style={{ height: "400px" }}></div>
-				</div>
-				*/}
 			    <Grid>
 					<h2 className="text-center header">
 						MyTrip
