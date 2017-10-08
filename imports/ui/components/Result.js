@@ -67,7 +67,6 @@ export default class Result extends React.Component {
             <h4> { tour.guide_name } </h4>
             <h5> { tour.guide_rating } </h5>
             <h5> { tour.location_names.join(", ") }</h5>
-            <h5> { tour.theme.join(", ") } </h5>
             <button type="button" className="btn btn-primary general" onClick={ this.displayMap }> View Tour </button>
             <button type="button" className="btn btn-secondary general"> Purchase Tour</button>
 
