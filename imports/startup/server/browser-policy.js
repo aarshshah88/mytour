@@ -11,6 +11,7 @@ BrowserPolicy.content.allowOriginForAll('*.cloudflare.com');
 BrowserPolicy.content.allowOriginForAll('*.stripe.com');
 BrowserPolicy.content.allowOriginForAll('*.cdnjs.com');
 BrowserPolicy.content.allowOriginForAll('*.ionicframework.com');
+BrowserPolicy.content.allowOriginForAll('*.wrld3d.com');
 BrowserPolicy.content.allowOriginForAll('*.facebook.com');
 BrowserPolicy.content.allowOriginForAll('*.facebook.net');
 BrowserPolicy.content.allowOriginForAll('scontent.xx.fbcdn.net');
