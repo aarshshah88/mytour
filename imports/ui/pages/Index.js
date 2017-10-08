@@ -110,6 +110,23 @@ class Index extends React.Component {
 					<h2 className="text-center">
 						Result
 					</h2> 
+
+
+          <div>
+
+          <h1> Tour </h1>
+          <p> 
+          Tour Guide Name: 4.0/5.0
+          </p>
+
+          <img src= "Users/aarshshah/mytour/mytour/Santiago.jpg" width: "304" height: "228">
+          
+
+
+
+          </div>
+
+
 					{
 					  	results.length > 0 ? 
 						  	<ListGroup className="DocumentsList">
