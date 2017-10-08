@@ -10,17 +10,15 @@ import container from '../../modules/container';
 const renderNavigation = hasUser => (hasUser ? <AuthenticatedNavigation /> : <PublicNavigation />);
 
 const AppNavigation = ({ hasUser }) => (
-  <Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <Link to="/">Application Name</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse>
-      { renderNavigation(hasUser) }
-    </Navbar.Collapse>
-  </Navbar>
+  <nav className="navbar navbar-default" role="navigation">
+    <div className="navbar-header">
+      <a className="navbar-brand" href="#">
+        <i className="ion-earth"/>
+        { " " }
+        MyTour
+      </a>
+    </div>
+  </nav>
 );
 
 AppNavigation.propTypes = {

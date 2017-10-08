@@ -1,3 +1,4 @@
+import ReactStars from 'react-stars'
 import React from 'react';
 import { Jumbotron, Grid, Row, Col } from 'react-bootstrap';
 import { Meteor } from 'meteor/meteor';
@@ -59,23 +60,38 @@ export default class Result extends React.Component {
     const { showMap } = this.state;
 
     return (
-		  <div className="row tour">
-          <div className= "col-sm-2">
-            <img className="circle" src={ "/guides/" + tour.guide_name + ".jpg" } />
-          </div>
-            <div className="col-sm-10 info">
-            <h4> { tour.guide_name } </h4>
-            <h5> { tour.guide_rating } </h5>
-            <h5> { tour.location_names.join(", ") }</h5>
-            <button type="button" className="btn btn-primary general" onClick={ this.displayMap }> View Tour </button>
-            <button type="button" className="btn btn-secondary general"> Purchase Tour</button>
-
-            <div className={ showMap? "" : "hidden"}>
-              <div style={{ position: "relative" }}>
-                <div id={ "map_" + tour._id } style={{ height: "400px" }}></div>
+        <div>
+          <Col md={ 6 }>
+    		    <div className="row tour">
+              <div className= "col-sm-2">
+                <img className="circle" src={ "/guides/" + tour.guide_name + ".jpg" } />
+              </div>
+              <div className="col-sm-10 info">
+                <h4> { tour.guide_name } </h4>
+                <ReactStars
+                  count={5}
+                  value={ tour.guide_rating }
+                  color2={'#ffd700'} 
+                />
+                <h5> { tour.location_names.join(", ") }</h5>
+                <button type="button" className="btn btn-primary general" onClick={ this.displayMap }> 
+                  <i className="ion-eye"/>
+                  { " " }
+                  View Tour 
+                </button>
+                <button type="button" className="btn btn-secondary general"> 
+                  <i className="ion-bag"/>
+                  { " " }
+                  Purchase Tour - { tour['Total Cost of Activities'] }
+                </button>
               </div>
             </div>
-          </div> 
+          </Col>
+          <Col md={ 6 } className={ showMap? "" : "hidden"}>
+            <div style={{ position: "relative" }}>
+              <div id={ "map_" + tour._id } style={{ height: "400px" }}></div>
+            </div>
+          </Col>
         </div>
     );
   }
