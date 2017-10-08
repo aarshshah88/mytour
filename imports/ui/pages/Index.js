@@ -77,7 +77,7 @@ class Index extends React.Component {
 	  		<div className="section 1">
 			    <Grid>
 					<h2 className="text-center header">
-						MyTrip
+						MyTour
 					</h2>    
 					<hr/>
 			    	<Col md={ 8 } mdOffset={ 2 }>
