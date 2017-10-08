@@ -24,3 +24,35 @@ body {
 	font-family: 'Poiret One', cursive !important;
 	font-size: 600%;
 }
+
+.tour {
+	background-color:white;
+	height: 155px;
+	border-radius: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+    height:50px;
+    width: 50px;
+}
+
+
+.info {
+	height: 155px;
+	display: inline;
+	border-radius: 5px;
+}
+
+.info h4 {
+	color: black;
+}
+
+.info h5 {
+	color: black;
+}
+
+.general {
+	display: inline; 
+	margin-right: 10px;
+}

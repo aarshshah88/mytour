@@ -110,6 +110,22 @@ class Index extends React.Component {
 					<h2 className="text-center">
 						Result
 					</h2> 
+
+          <div className="row tour">
+            <div className= "col-sm-2">
+              <img className="circle" />
+            </div>
+            <div className="col-sm-10 info">
+            <h4> Juana </h4>
+            <h5> 4.4 </h5>
+            <h5> Quintonil, Mercado de San Juan, Qué Bo, Magnolia Bakery, Coyoacan Market</h5>
+            <h5> Food </h5>
+            <button type="button" className="btn btn-primary general"> View Tour </button>
+            <button type="button" className="btn btn-secondary general"> Purchase Tour</button>
+
+            </div> 
+          </div>
+
 					{
 					  	results.length > 0 ? 
 						  	<ListGroup className="DocumentsList">
@@ -121,6 +137,7 @@ class Index extends React.Component {
 						  	</ListGroup> 
 					  	:
 					  		"No tours"
+
 					}   
 
 				</Grid>
